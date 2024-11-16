@@ -43,7 +43,6 @@ const LogIn = () => {
                     dispatch(updateUser({ userToken: response.token }));
                     setTimeout(() => {
                         navigate('/products');
-                        window.location.reload();
                     }, 1000);
                 } else {
                     throw new Error(response.message);
