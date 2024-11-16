@@ -27,7 +27,7 @@ const App = () => {
         <Route path="/organiser-login" element={<Login user={false} />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/update-event/:id" element={<UpdateEvent />} /> */}
-        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
     </BrowserRouter>
   );
