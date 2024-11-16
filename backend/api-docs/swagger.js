@@ -26,11 +26,6 @@ module.exports = (app) => {
     app.use(
         '/api/docs',
         swaggerUi.serve,
-        swaggerUi.setup(specs, {
-            explorer: true,
-            swaggerOptions: {
-                persistAuthorization: true, // Keep bearer token across sessions
-            },
-        })
+        swaggerUi.setup(specs)
     );
 };
