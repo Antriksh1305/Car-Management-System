@@ -7,15 +7,16 @@ import './App.css';
 // pages
 import Login from './pages/login';
 import Register from './pages/register';
-// import Home from './pages/Home';
+import Products from './pages/products';
 // import CarDetails from './pages/CarDetails';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index path='/login' element={<Login />} />
+        <Route index path='/' element={<Login />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/products' element={<Products />} />
         {/* <Route index path='/' element={<Home />} />
         <Route path="/event/:id" element={<Event />} />
         <Route path="/user-register" element={<Register user={true} />} />

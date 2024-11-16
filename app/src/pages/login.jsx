@@ -42,7 +42,7 @@ const LogIn = () => {
 
                     dispatch(updateUser({ userToken: response.token }));
                     setTimeout(() => {
-                        navigate('/');
+                        navigate('/products');
                         window.location.reload();
                     }, 1000);
                 } else {

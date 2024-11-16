@@ -43,7 +43,7 @@ const Registration = () => {
 
                     dispatch(updateUser({ userToken: response.token }));
                     setTimeout(() => {
-                        navigate('/');
+                        navigate('/products');
                         window.location.reload();
                     }, 1000);
                 } else {
@@ -114,7 +114,7 @@ const Registration = () => {
                         </div>
                     </form>
                     <div className="register-text">
-                        Don't have an account? <Link to='/login'>
+                        Don't have an account? <Link to='/'>
                             <span className="p2">Login</span>
                         </Link>
                     </div>
