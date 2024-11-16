@@ -1,0 +1,150 @@
+.login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--tertiary);
+    color: var(--text);
+}
+
+.login-container {
+    display: flex;
+    max-width: 100vw;
+    min-height: 100vh;
+    background-color: var(--tertiary);
+    overflow: hidden;
+}
+
+.image-container {
+    width: 65%;
+    background-color: var(--secondary);
+}
+
+.login-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-container {
+    flex: 1;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.heading {
+    font-size: 20px;
+    color: var(--text);
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.login-form {
+    margin-top: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 5px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    background-color: var(--secondary);
+    color: var(--text);
+    border: 1px solid var(--tertiary);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: var(--text);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: var(--text);
+    background-color: var(--primary);
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--text);
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+}
+
+.register-text {
+    margin-top: 20px;
+}
+
+span.p2 {
+    color: var(--text);
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+span.p2:hover {
+    color: var(--primary);
+}
+
+@media (max-width: 1280px) {
+    .form-container {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .image-container {
+        width: 55%;
+    }
+
+    .form-container {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        display: none;
+    }
+    
+    .form-container {
+        width: 360px;
+    }
+}

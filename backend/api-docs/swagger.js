@@ -15,7 +15,7 @@ const options = {
             },
         },
         servers: [
-            { url: 'https://car-management-backend-rust.vercel.app', description: 'Staging server', },
+            { url: process.env.STAGING_URL, description: 'Staging server', },
         ],
     },
     apis: ['./routes/*.js'],
