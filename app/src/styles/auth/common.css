@@ -1,3 +1,11 @@
+.loader-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
 .login-page {
     display: flex;
     align-items: center;
@@ -66,7 +74,7 @@ label {
     letter-spacing: 0.8px;
 }
 
-input {
+.input {
     width: 100%;
     padding: 15px;
     font-size: 14px;
@@ -78,7 +86,7 @@ input {
     transition: border-color 0.3s ease;
 }
 
-input:focus {
+.input:focus {
     border-color: var(--text);
 }
 

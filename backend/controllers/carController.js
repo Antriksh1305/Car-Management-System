@@ -71,7 +71,7 @@ exports.deleteCar = async (req, res) => {
         const car = await Car.findOneAndDelete({ _id: req.params.id, user: req.user.id });
 
         if (!car) {
-            return res.status(404).json({ message: 'Car not found or not authorized' });
+            return res.status(404).json({ message: 'Car not found' });
         }
 
         res.status(200).json({ message: 'Car deleted successfully' });

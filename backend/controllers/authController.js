@@ -24,13 +24,13 @@ exports.register = async (req, res) => {
 
         if (!passwordRegex.test(password)) {
             return res.status(400).json({
-                message: "Password must be at least 6 characters long."
+                message: "Password must be 6+ characters.",
             });
         }
 
         const existingUser = await User.findOne({ email });
         if (existingUser) {
-            return res.status(400).json({ message: "Email already exists. Registration not possible." });
+            return res.status(400).json({ message: "Email already exists." });
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -62,7 +62,14 @@ exports.login = async (req, res) => {
         }
 
         const token = generateToken(user._id);
-        res.status(200).json({ token });
+        res.status(200).json({
+            token,
+            user: {
+                id: user._id,
+                name: user.name,
+                email: user.email,
+            },
+        });
     } catch (error) {
         res.status(500).json({ message: "An unexpected error occurred." });
     }
