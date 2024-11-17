@@ -1,11 +1,12 @@
 import { API } from "../apis";
 
-export const createCar = async (car) => {
+export const createCar = async (car, token) => {
     try {
         const response = await fetch(`${API.BASE_URL}${API.CREATE_CAR}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
             },
             body: JSON.stringify(car),
         });

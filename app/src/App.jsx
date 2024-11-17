@@ -8,6 +8,8 @@ import './App.css';
 import Login from './pages/login';
 import Register from './pages/register';
 import Products from './pages/products';
+import CreateProduct from './pages/createProduct';
+import UpdateProduct from './pages/updateProduct';
 // import CarDetails from './pages/CarDetails';
 
 const App = () => {
@@ -17,6 +19,8 @@ const App = () => {
         <Route index path='/' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/products' element={<Products />} />
+        <Route path='/create' element={<CreateProduct />} />
+        <Route path='/update/:id' element={<UpdateProduct />} />
         {/* <Route index path='/' element={<Home />} />
         <Route path="/event/:id" element={<Event />} />
         <Route path="/user-register" element={<Register user={true} />} />

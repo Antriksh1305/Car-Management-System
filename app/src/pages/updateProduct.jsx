@@ -1,11 +1,14 @@
 import React, { useState, useRef } from "react";
 
-import '../styles/createProduct.css'
+import { useLocation } from "react-router-dom";
 
-const CreateProduct = () => {
-    const [title, setTitle] = useState("");
-    const [description, setDescription] = useState("");
-    const [tags, setTags] = useState([]);
+const UpdateProduct = () => {
+    const location = useLocation();
+    const product = location?.state?.product;
+
+    const [title, setTitle] = useState(product?.title || "");
+    const [description, setDescription] = useState(product?.description || "");
+    const [tags, setTags] = useState(product?.tags || []);
     const [currentTag, setCurrentTag] = useState("");
     const [images, setImages] = useState([]);
     const fileInputRef = useRef(null);
@@ -40,7 +43,7 @@ const CreateProduct = () => {
 
     return (
         <div className="create-product">
-            <h2 className="font-700">Create Product</h2>
+            <h2 className="font-700">Update Product</h2>
             <form>
                 <div className="form-group">
                     <label htmlFor="title">Title</label>
@@ -120,4 +123,4 @@ const CreateProduct = () => {
     );
 };
 
-export default CreateProduct;
+export default UpdateProduct;
